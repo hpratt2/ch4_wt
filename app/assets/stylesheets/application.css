@@ -49,9 +49,10 @@ table#movies th, table#movies td {
   text-align: left;
 }
 #notice, #warning {
-  color: red;
+  color: darkred;
   text-align: center;
   background: rosybrown;
+  border: 1px solid brown;
   margin: 1em 0;
   padding: 4px;
 }
