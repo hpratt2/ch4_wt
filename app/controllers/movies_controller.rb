@@ -13,4 +13,16 @@ class MoviesController < ApplicationController
   def new
     # default: render 'new' template
   end
+  
+  def create
+    @movie = Movie.create! movie_params
+    flash[:notice] = "#{@movie.title} was successfully created."
+    redirect_to movies_path
+  end
+  
+  def movie_params
+    params.require(:movie).permit(:title, :description, :rating, :release_date)
+  end
+  
+  
 end
